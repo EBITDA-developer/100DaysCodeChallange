@@ -1,0 +1,51 @@
+import random
+
+print("Welloce to the game Rock Paper Scissors!\n\nTotay you will play against 'radom' python fuction.\n\n" + f"{' Good luck! ':#^30}\n")
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+the_hand_signals = [rock, paper, scissors]
+
+player_choise = int(input("What do you choose? Type 0 for Rock, 1 for Paper and 2 for Scissors\n"))
+if player_choise != 0 and player_choise != 1 and player_choise != 2:
+  print("\n!!! You typed an invalid number. Pleace start from the beginning !!!")
+else: 
+  player_choise
+  computer_choise = random.randint(0, 2)
+    
+  print(f"Your choise:{the_hand_signals[player_choise]}" + f"\nComputer choise:{the_hand_signals[computer_choise]}")
+  if player_choise == computer_choise:
+    print(f"{' It`s a draw ':#^30}\n{'':#^30}")
+  elif player_choise == 0 and computer_choise == 2:
+    print(f"{' You win ':#^30}\n{' GONGRATULATIONS!!! ':#^30}")
+  elif player_choise == 2 and computer_choise == 1:
+    print(f"{' You win ':#^30}\n{' GONGRATULATIONS!!! ':#^30}")
+  elif player_choise == 1 and computer_choise == 0:
+    print(f"{' You win ':#^30}\n{' GONGRATULATIONS!!! ':#^30}")
+  else:
+    print(f"{' You lose ':#^30}\n{' !!! ':#^30}") 
